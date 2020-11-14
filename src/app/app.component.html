@@ -1,91 +1,85 @@
-<div class="row">
-	<div class="container">
-		<mat-toolbar color="primary">
-			<mat-toolbar-row>
-				<span>My Web</span>
-				<span class="example-spacer"></span>
-				<mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-				<mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
-			</mat-toolbar-row>
-		</mat-toolbar>
-	</div>
+<div class="container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>My Web</span>
+      <span class="example-spacer"></span>
+      <mat-icon
+        class="example-icon"
+        aria-hidden="false"
+        aria-label="Example heart icon"
+        >favorite</mat-icon
+      >
+      <mat-icon
+        class="example-icon"
+        aria-hidden="false"
+        aria-label="Example delete icon"
+        >delete</mat-icon
+      >
+    </mat-toolbar-row>
+  </mat-toolbar>
 </div>
-<div class="row">
-	<mat-divider color="warn"></mat-divider>
-</div>
-<div class="row">
-	<div class="container">
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Videos</a></li>
-				<li class="breadcrumb-item"><a href="#">People</a></li>
-				<li class="breadcrumb-item"><a href="#">Documents</a></li>
-				<li class="breadcrumb-item"><a href="#">Events</a></li>
-				<li class="breadcrumb-item"><a href="#">Communities</a></li>
-				<li class="breadcrumb-item"><a href="#">Favorites</a></li>
-				<li class="breadcrumb-item"><a href="#">Channels</a></li>
-			</ol>
-		</nav>
-	</div>
-</div>
-<div class="row">
-	<mat-divider color="warn"></mat-divider>
-</div>
-<div class="row">
-	<div class="container">
-		<div class="row">
-			<div class="col m6">
-				<div class="card">
-					<div class="card-body">
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of
-							the
-							card's content.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col m3">
-				<div class="card">
-					<div class="card-body">
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of
-							the
-							card's content.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col m3">
-				<div class="card">
-					<mat-list>
-						<mat-list-item>
-							<img matListAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="...">
-							<h3 matLine> Title </h3>
-							<p matLine>
-								<span> Subtitle </span>
-								<span class="demo-2"> -- Content </span>
-							</p>
-						</mat-list-item>
 
-						<mat-list-item>
-							<img matListAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="...">
-							<h3 matLine> Title </h3>
-							<p matLine>
-								<span> Subtitle </span>
-								<span class="demo-2"> -- Content </span>
-							</p>
-						</mat-list-item>
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Videos</a></li>
+      <li class="breadcrumb-item"><a href="#">People</a></li>
+      <li class="breadcrumb-item"><a href="#">Documents</a></li>
+      <li class="breadcrumb-item"><a href="#">Events</a></li>
+      <li class="breadcrumb-item"><a href="#">Communities</a></li>
+      <li class="breadcrumb-item"><a href="#">Favorites</a></li>
+      <li class="breadcrumb-item"><a href="#">Channels</a></li>
+    </ol>
+  </nav>
+</div>
 
-						<mat-list-item>
-							<img matListAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="...">
-							<h3 matLine> Title </h3>
-							<p matLine>
-								<span> Subtitle </span>
-								<span class="demo-2"> -- Content </span>
-							</p>
-						</mat-list-item>
-					</mat-list>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container">
+  <div class="video-section">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card h-100 bg-info">
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-50 bg-info">
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card h-50 bg-info">
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <!-- <div class="card"> -->
+        <mat-list>
+          <mat-list-item *ngFor="let item of listActivities">
+            <img matListAvatar src="{{item.image}}" alt="..." />
+            <h3 matLine>{{item.title}}</h3>
+            <p matLine>
+              <span> {{item.subtitle}} </span>
+              <span class="demo-2"> {{item.subtitle}} </span>
+            </p>
+          </mat-list-item>
+        </mat-list>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- <div class="row">
@@ -97,4 +91,70 @@
 		</div>
 	</div>
 	<div class="col-md-4">.col-md-4</div>
+</div> -->
+
+<!-- <div class="container">
+  <div class="header">
+    <h1 class="judul">My Website</h1>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <div class="col s12">
+          <a href="#!" class="breadcrumb">Videos</a>
+          <a href="#!" class="breadcrumb">Peoples</a>
+          <a href="#!" class="breadcrumb">Documents</a>
+          <a href="#!" class="breadcrumb">Events</a>
+          <a href="#!" class="breadcrumb">Communities</a>
+          <a href="#!" class="breadcrumb">Favorites</a>
+          <a href="#!" class="breadcrumb">Channels</a>
+        </div>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="col m6">
+      <div class="card blue-grey darken-1" style="height:500px;"></div>
+    </div>
+    <div class="col m3">
+      <div class="tengah">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text"></div>
+        </div>
+      </div>
+
+      <div class="tengah">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col m3">
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col">
+            <img
+              src="https://materializecss.com/images/yuna.jpg"
+              alt=""
+              class="responsive-img"
+            />
+          </div>
+          <div class="col">
+            <span class="black-text">
+              This is a square image. Add the "circle" class to it to make it
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div> -->
